@@ -1,0 +1,72 @@
+body  {
+    font-family: Montserrat, sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+
+}
+
+#roundResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: black;
+    font-size: 20px;
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    gap: 100px;
+    margin: 50px;
+    padding: 100px;
+    left: 0;
+    right: 0;
+    border-radius: 10px;
+}
+
+#rockBtn, #paperBtn, #scissorsBtn {
+    background-color: white;
+    color: grey;
+    border-color: black;
+    border-radius: 10px;
+    width: 300px;
+    height: 150px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: black;
+    font-size: 20px;
+}
+
+#end {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: black;
+    font-size: 20px;
+}
