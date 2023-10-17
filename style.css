@@ -7,7 +7,7 @@ body  {
     overflow: hidden;
 }
 
-.container {
+#container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,12 +61,13 @@ body  {
     font-size: 20px;
 }
 
-#end {
+#finish {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-top: 50px;
     color: black;
-    font-size: 20px;
+    font-size: 50px;
+    gap: 50px;
 }
