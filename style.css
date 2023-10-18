@@ -51,6 +51,8 @@ body  {
     height: 150px;
     font-size: 30px;
     font-weight: bold;
+    cursor: pointer;
+    
 }
 
 #score {

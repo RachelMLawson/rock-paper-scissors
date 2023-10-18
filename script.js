@@ -107,6 +107,7 @@ function displayWinner(winner) {
     let resetText = document.createTextNode("Play again?");
     resetButton.style.width = "100px";
     resetButton.style.height = "50px";
+    resetButton.style.cursor = "pointer";
 
     const refreshPage = () => {
         location.reload();
