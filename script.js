@@ -1,18 +1,28 @@
+/* 
+- remove logic that plays five rounds
+- create a button for each selection
+- add event listeners to each button that call the playRound function with playerSelection (keep console.logs)
+- add a div for displaying results
+- change all console.logs to DOM methods
+- display the running score
+- once one player gets 5 points, announce a game winner
+*/
+
 let playerWins = 0;
 let computerWins = 0;
 
 // buttons call playRound function when clicked
-let rockBtn = document.getElementById("rockBtn");
+let rockBtn = document.getElementById('rockBtn');
 rockBtn.addEventListener('click', () => {
     playRound('rock');
 });
 
-let paperBtn = document.getElementById("paperBtn");
+let paperBtn = document.getElementById('paperBtn');
 paperBtn.addEventListener('click', () => {
     playRound('paper');
 });
 
-let scissorsBtn = document.getElementById("scissorsBtn");
+let scissorsBtn = document.getElementById('scissorsBtn');
 scissorsBtn.addEventListener('click', () => {
     playRound('scissors');
 });
@@ -38,7 +48,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-//plays a single round and returns a string declaring the winner
+//plays a single round and keeps track of wins
 function playRound(playerSelection) {
     let computerSelection = getComputerChoice();
     let result;
@@ -80,14 +90,11 @@ function playRound(playerSelection) {
     } else if (computerWins == 5) {
         displayWinner('computer');
     }
-
-    return result;
 }
 
+//displays game winner and asks player to play again
 function displayWinner(winner) {
-    //todo: style reset button
     
-
     if (winner == 'player') {
         finish.textContent = "You won!";
         console.log("You won!");
@@ -95,6 +102,7 @@ function displayWinner(winner) {
         finish.textContent = "You lost!";
         console.log("You lost!");
     }
+
     let resetButton = document.createElement('button');
     let resetText = document.createTextNode("Play again?");
     resetButton.style.width = "100px";
@@ -105,7 +113,6 @@ function displayWinner(winner) {
       }
       
     resetButton.addEventListener('click', refreshPage);
-      
 
     resetButton.appendChild(resetText);
     finish.appendChild(resetButton);
@@ -114,17 +121,3 @@ function displayWinner(winner) {
     buttonContainer.remove(); 
 
 }
-
-
-
-
-
-/* 
-- remove logic that plays five rounds
-- create a button for each selection
-- add event listeners to each button that call the playRound function with playerSelection (keep console.logs)
-- add a div for displaying results
-- change all console.logs to DOM methods
-- display the running score
-- once one player gets 5 points, announce a game winner
-*/
